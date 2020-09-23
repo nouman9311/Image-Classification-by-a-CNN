@@ -1,0 +1,151 @@
+'''
+def person(name, **data):
+    print(name)
+    for i,j in data.items():
+        print(i,j)
+
+person("navin", age=28, city="Ilmenau", num=15730172512)
+
+
+a = 10
+b = 13
+c = 55
+print(id(a))
+def something():
+    a = 9
+
+    x = globals()['a']
+    print(id(x))
+
+    print("in fun" ,a)
+
+    globals()['a'] = 15
+
+something()
+
+print("outside", a)
+
+
+def count(lst):
+    for i in lst:
+       if len("i") > 5:
+        x = "".count(lst)
+    else:
+        return "empty"
+
+
+lst = ["nouman","abhi","balouch","Huzaifa","ronaldo","virat","paksitan","telusko"]
+
+
+
+
+def fib(n):
+    a = 0
+    b = 1
+    if n < 0:
+        print('null')
+    else:
+        if n == 1:
+            print(a)
+        else:
+            print(a)
+            print(b)
+            for i in range(2,n):
+                c = a+b
+                a = b
+                b = c
+
+
+
+import sys
+
+sys.setrecursionlimit(2000)
+print(sys.getrecursionlimit())
+i = 0
+
+def greet():
+    global i
+    i+=1
+    print('Hello', i)
+    greet()
+greet()
+
+
+
+
+def fact(n):
+
+    if n==0:
+        return 1
+    return n * fact(n-1)
+
+
+
+
+result = fact(5)
+
+print(result)
+
+
+
+def square(a):
+    return a*a
+result = square(5)
+print(result)
+
+
+f = lambda a,b: a*b
+
+result = f(5,6)
+print(result)
+
+
+from _functools import reduce
+def add_all(a,b):
+    return a+b
+
+def update():
+    return nums+2
+nums = [3,2,3,42,52,35,2352,51,153251]
+
+even = list(filter(lambda n :n%2==0,nums))
+
+doubles = list(map(lambda n :n+2,even))
+
+sum = reduce(add_all,doubles)
+
+print(sum)
+
+
+
+#decorators
+
+def div(a,b):
+    if a < b:
+        a,b = b,a
+    print(a/b)
+div(2,4)
+
+
+'''
+
+class Employee:
+    def __init__(self,first,last,pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + "." + last + "@gmail.com"
+
+    def fullname(self):
+        return "{} {}".format(self.first,self.last)
+
+emp_1 = Employee('corey', 'Schafer' , 60000 )
+emp_2 = Employee('Nomi', 'Khan', 50000)
+
+
+
+
+print(emp_1.email)
+print(emp_2.email)
+
+print(emp_1.fullname())
